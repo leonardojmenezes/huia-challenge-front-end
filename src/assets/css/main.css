@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Helvetica Neue";
-  src: url-loader("~@/assets/fonts/HelveticaNeue.ttc");
+  src: url-loader("../fonts/HelveticaNeue.ttc");
 }
 
 body, body section#max-doctor form #return-message, body section#max-doctor form .form_fields .field label, body section#max-doctor form .form_fields .field select,
