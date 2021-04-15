@@ -111,6 +111,9 @@ body {
                         margin-right: 15px;
                         @extend %font-family-default;
                     }
+                    .uf_data {
+                        display: inline;
+                    }
                     select,
                     input {
                         &:not(.button_style) {

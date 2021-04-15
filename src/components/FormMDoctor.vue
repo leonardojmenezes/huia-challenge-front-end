@@ -8,12 +8,17 @@
             </div>
             <div class="field">
                 <label>UF</label>
-                <select v-model="ufSelected" required>
-                    <option value="" disabled selected>Selecionar</option>
-                    <option v-for="uf in ufData" :key="uf.id" :value="uf.id">
-                        {{ uf.sigla }} - {{ uf.nome }}
-                    </option>
-                </select>
+                <div class="uf_data" v-if="ufData.length > 0">
+                    <select v-model="ufSelected" required>
+                        <option value="" disabled selected>Selecionar</option>
+                        <option v-for="uf in ufData" :key="uf.id" :value="uf.id">
+                            {{ uf.sigla }} - {{ uf.nome }}
+                        </option>
+                    </select>
+                </div>
+                <div class="uf_data" v-else>
+                    <span>Carregando...</span>
+                </div>
             </div>
             <div class="field">
                 <input type="submit" class="button_style" value="Continue" />

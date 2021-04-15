@@ -120,6 +120,10 @@ body section#max-doctor form .form_fields .field label {
   margin-right: 15px;
 }
 
+body section#max-doctor form .form_fields .field .uf_data {
+  display: inline;
+}
+
 body section#max-doctor form .form_fields .field select:not(.button_style),
 body section#max-doctor form .form_fields .field input:not(.button_style) {
   border: none;
