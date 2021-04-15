@@ -1,4 +1,4 @@
-# bild-vitta
+# Huia
 
 ## O primeiro passo é muito simples, instale as dependências do node com a seguinte linha de comando:
 ```
