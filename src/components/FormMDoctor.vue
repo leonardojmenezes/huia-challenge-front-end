@@ -10,8 +10,8 @@
                 <label>UF</label>
                 <select v-model="ufSelected" required>
                     <option value="" disabled selected>Selecionar</option>
-                    <option v-for="uf in ufData" :key="uf.code" :value="uf.code">
-                        {{ uf.label }}
+                    <option v-for="uf in ufData" :key="uf.id" :value="uf.id">
+                        {{ uf.sigla }} - {{ uf.nome }}
                     </option>
                 </select>
             </div>
@@ -49,24 +49,7 @@
                 const vm = this;
       
                 axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados').then(response => {
-                    
-                    const r = response.data;
-                    const ufs = [];
-
-                    r.forEach((data, index) => {
-
-                        const retorno = r[index];
-                        const obj = {
-                            label: retorno.sigla,
-                            code: retorno.id
-                        };
-
-                        ufs.push(obj);
-
-                    });
-
-                    vm.ufData = ufs;
-
+                    vm.ufData = response.data;
                 }).catch(error => {
                     console.log(error);
                 });
