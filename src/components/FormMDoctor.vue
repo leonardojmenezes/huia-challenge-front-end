@@ -41,8 +41,7 @@
             return {
                 crm: null,
                 ufSelected: '',
-                ufData: [],
-                emptyData: 'Nenhum dado encontrado.'
+                ufData: []
             };
         },
         mounted() {
